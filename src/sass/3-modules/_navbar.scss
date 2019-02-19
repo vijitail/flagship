@@ -1,0 +1,39 @@
+
+.navbar {
+    font-family: $font-family-base;
+    background: #fff;
+    position: relative;
+
+    .navbar-collapse {
+        background: #fff;
+    }
+
+    ul.navbar-nav {
+        li.nav-item {
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+
+            & > .btn {
+                font-size: 14px; 
+            }
+
+            .nav-link {
+                font-weight: $font-weight-semibold;
+                color: $link-color;
+                padding-left: 0px;
+                padding-right: 0px;
+                font-size: 14px;
+
+                &:hover {
+                    color: $link-active-color;
+                }
+            }
+
+            &.active {
+                .nav-link {
+                    color: $link-active-color;
+                }
+            }
+        }
+    }
+}

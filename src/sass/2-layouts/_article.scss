@@ -1,0 +1,13 @@
+
+.article {
+    width: 530px;
+
+    & > h3 {
+        color: #3a3a3a;
+    }
+
+    & > p {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}

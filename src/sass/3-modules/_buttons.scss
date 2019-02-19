@@ -1,0 +1,38 @@
+// $input-btn-padding-y:         .375rem !default;
+$btn-padding-x-sm: 26px ;
+$btn-padding-x: 40px;
+
+$btn-border-radius: 50px;
+$btn-border-radius-sm: 50px;
+$btn-border-radius-lg: 60px;
+$btn-font-weight: $font-weight-semibold;
+
+$btn-font-family: "Montserrat", sans-serif;
+
+.btn {
+
+    text-transform: uppercase;
+
+    &.btn-sm {
+        text-transform: capitalize;
+    }
+
+    &.btn-primary {
+        color: #fff;
+        
+        &:hover, &:active, &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-secondary {
+        color: #fff;
+    }
+
+    &.btn-lg {
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+}
+
+@import "../../node_modules/bootstrap/scss/buttons";

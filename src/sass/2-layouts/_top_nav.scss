@@ -1,0 +1,15 @@
+
+
+.top-nav {
+    height: 43px;
+    background: theme-color("secondary");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    span {
+        font-weight: $font-weight-bold;
+        text-decoration: underline;
+    }
+}

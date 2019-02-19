@@ -1,0 +1,23 @@
+
+$font-family-base: 'Montserrat', sans-serif;
+$font-size-base:  14px;
+
+$font-weight-semibold: 600;
+$font-weight-extrabold: 800;
+
+$h1-font-size: 54px;
+$h2-font-size: 36px;
+$h3-font-size: 26px;
+$h4-font-size: 22px;
+
+$headings-font-weight: $font-weight-extrabold;
+
+p {
+    font-weight: $font-weight-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+@import "../../../node_modules/bootstrap/scss/type";

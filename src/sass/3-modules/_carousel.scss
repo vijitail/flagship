@@ -1,0 +1,79 @@
+$carousel-control-prev-icon-bg: url('../svg/prev.svg');
+$carousel-control-next-icon-bg: url('../svg/next.svg');
+$carousel-control-icon-width: 15px;
+$carousel-control-opacity: 1 ;
+$carousel-control-hover-opacity: 1;
+
+@import '../../../node_modules/bootstrap/scss/carousel';
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.carousel-caption {
+    align-self: center;
+    position: unset;
+    text-align: left;
+    width: 605px;
+
+    & > p {
+        font-weight: $font-weight-semibold;
+        font-size: 17px;
+        line-height: 32px;
+    }
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+    
+    &:hover .icon-wrapper {
+        background: rgba(255, 255, 255, 0.35);
+    }
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+
+    &:hover .icon-wrapper {
+        background: rgba(255, 255, 255, 0.35);
+    }
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition-base;
+}
+
+.carousel-indicators {
+    align-items: flex-end;
+    margin-bottom: 30px;
+
+    & li {
+        border-radius: 50px;
+        height: 10px;
+        width: 10px;
+        border: none;
+        opacity: 1;
+        background: #fff;
+        transition: $transition-base;
+
+        &.active {
+            background: #0058bb;
+            width: 13px;
+            height: 13px;
+        }
+    }
+}
+
+
+  
