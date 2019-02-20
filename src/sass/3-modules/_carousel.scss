@@ -75,5 +75,164 @@ $carousel-control-hover-opacity: 1;
     }
 }
 
+.services-carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include clearfix();
+}
 
+.services-carousel-item-wrapper {
+    display: flex;
+    width: calc(125vw - 14px);
+    transition: transform .5s;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1024px) {
+        width: calc(166.65vw - 14px);
+    }
+
+    @media screen and (max-width: 768px) {
+        width: calc(250vw - 14px);
+    }
+
+    @media screen and (max-width: 600px) {
+        width: calc(500vw - 14px);
+    }
+}
+
+.services-col {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(565px * 2);
+    flex-grow: 1;
+
+    & .service-item {
+        flex-grow: 1;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .service-overlay {
+                transform: scale(1.2);
+                &:after {
+                    background-color: rgba(0, 0, 0, 0.35); 
+                }
+            }
+            .service-caption {
+                bottom: 10px;
+            }
+        }
+    }
+}
+
+.service-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 20px;
+    display: flex;
+    height: 100px;
+    h4 {
+        color: #fff;
+        margin-bottom: auto;
+        margin-top: 0px;
+        max-width: 260px;
+    }
+    transition: $transition-base;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: $transition-base;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &#service1 {
+        background-image: url('../images/event-consulting.png');
+    }
+    &#service3 {
+        background-image: url('../images/creative.png');
+    }
+    &#service5 {
+        background-image: url('../images/design-print.png');
+    }
+    &#service7 {
+        background-image: url('../images/event-marketing-pr.png');
+    }
+    &#service2 {
+        background-image: url('../images/venue-selection.png');
+    }
+    &#service4 {
+        background-image: url('../images/event-production.png');
+    }
+    &#service6 {
+        background-image: url('../images/photography-videography.png');
+    }
+    &#service8 {
+        background-image: url('../images/entertainment-talent-booking.png');
+    }
+    &#service10 {
+        background-image: url('../images/event-consulting.png');
+    }
+
+    &:after {
+        background-color: rgba(0, 0, 0, 0);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        transition: $transition-base;
+    }
+}
+
+#services-carousel {
+    .carousel-control-next, .carousel-control-prev {
+        width: 4%;
+    }
+    .icon-wrapper {
+        width: 25px;
+        height: 60px;
+        background: theme-color('secondary');
+    }
+}
+
+.yellow {
+    background: $yellow;
+}
+.orange {
+    background: $orange;
+}
+.purple {
+    background: $purple;
+}
+.green {
+    background: $green;
+}
+.blue {
+    background: $blue;
+}
+
+// #services-carousel {
+//     .left {
+//         transform: translateX(0%);
+//     }
+
+//     .right {
+//         transform: translateX(-20%);
+
+//         @media screen and (max-width: 1024px) {
+//             transform: translateX(-40%); 
+//         }
+
+//         @media screen and (max-width: 768px) {
+//             transform: translateX(-60%); 
+//         }
+//     }
+// }
   

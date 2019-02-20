@@ -1,0 +1,22 @@
+
+#post-service-section {
+    min-height: 554px;
+    position: relative;
+    background-image: url('../images/image-accent.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+}
+
+#post-service-section > .container {
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    & > div {
+        max-width: 516px;
+    }
+}

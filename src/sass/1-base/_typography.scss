@@ -12,12 +12,15 @@ $h4-font-size: 22px;
 
 $headings-font-weight: $font-weight-extrabold;
 
+@import "../../../node_modules/bootstrap/scss/type";
+
 p {
     font-weight: $font-weight-light;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-@import "../../../node_modules/bootstrap/scss/type";

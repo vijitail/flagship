@@ -1072,16 +1072,6 @@ template {
   display: block;
 }
 
-/* line 15, src/sass/1-base/_typography.scss */
-p {
-  font-weight: 300;
-}
-
-/* line 19, src/sass/1-base/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-}
-
 /* line 7, node_modules/bootstrap/scss/_type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -1222,6 +1212,18 @@ mark,
   content: "\2014\00A0";
 }
 
+/* line 17, src/sass/1-base/_typography.scss */
+p {
+  font-weight: 300;
+}
+
+/* line 21, src/sass/1-base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 /* line 3, src/sass/2-layouts/_top_nav.scss */
 .top-nav {
   height: 43px;
@@ -1256,7 +1258,7 @@ nav.navbar {
 
 /* line 2, src/sass/2-layouts/_right-container.scss */
 .right-container {
-  height: 762px;
+  min-height: 762px;
   padding-top: 50px;
   padding-bottom: 50px;
   display: -webkit-box;
@@ -1286,6 +1288,70 @@ nav.navbar {
 .article > p {
   margin-top: 35px;
   margin-bottom: 35px;
+}
+
+/* line 2, src/sass/2-layouts/_services-section.scss */
+#services-section {
+  height: 168px;
+  background: #ef3e32;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 2, src/sass/2-layouts/_post-service-section.scss */
+#post-service-section {
+  min-height: 554px;
+  position: relative;
+  background-image: url("../images/image-accent.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 13, src/sass/2-layouts/_post-service-section.scss */
+#post-service-section > .container {
+  color: #fff;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 19, src/sass/2-layouts/_post-service-section.scss */
+#post-service-section > .container > div {
+  max-width: 516px;
 }
 
 /*!
@@ -6544,21 +6610,26 @@ html {
 }
 
 /* line 20, src/sass/3-modules/_buttons.scss */
+.btn.border-white {
+  border: 1px solid #fff;
+}
+
+/* line 24, src/sass/3-modules/_buttons.scss */
 .btn.btn-primary {
   color: #fff;
 }
 
-/* line 23, src/sass/3-modules/_buttons.scss */
+/* line 27, src/sass/3-modules/_buttons.scss */
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
   color: #fff;
 }
 
-/* line 28, src/sass/3-modules/_buttons.scss */
+/* line 32, src/sass/3-modules/_buttons.scss */
 .btn.btn-secondary {
   color: #fff;
 }
 
-/* line 32, src/sass/3-modules/_buttons.scss */
+/* line 36, src/sass/3-modules/_buttons.scss */
 .btn.btn-lg {
   text-transform: uppercase;
   font-size: 16px;
@@ -6998,6 +7069,48 @@ fieldset:disabled a.btn {
           box-shadow: 0 0 0 0.2rem rgba(138, 80, 162, 0.5);
 }
 
+/* line 60, node_modules/bootstrap/scss/_buttons.scss */
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+.btn-transparent:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-transparent:focus, .btn-transparent.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+/* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-transparent.disabled, .btn-transparent:disabled {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-transparent:not(:disabled):not(.disabled):active, .btn-transparent:not(:disabled):not(.disabled).active,
+.show > .btn-transparent.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-transparent:not(:disabled):not(.disabled):active:focus, .btn-transparent:not(:disabled):not(.disabled).active:focus,
+.show > .btn-transparent.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-primary {
   color: #f0a33e;
@@ -7356,6 +7469,46 @@ fieldset:disabled a.btn {
 .show > .btn-outline-accent.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(117, 49, 145, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(117, 49, 145, 0.5);
+}
+
+/* line 66, node_modules/bootstrap/scss/_buttons.scss */
+.btn-outline-transparent {
+  color: transparent;
+  border-color: transparent;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+.btn-outline-transparent:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-transparent:focus, .btn-outline-transparent.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+/* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-transparent.disabled, .btn-outline-transparent:disabled {
+  color: transparent;
+  background-color: transparent;
+}
+
+/* line 82, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-transparent:not(:disabled):not(.disabled):active, .btn-outline-transparent:not(:disabled):not(.disabled).active,
+.show > .btn-outline-transparent.dropdown-toggle {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-transparent:not(:disabled):not(.disabled):active:focus, .btn-outline-transparent:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-transparent.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 /* line 77, node_modules/bootstrap/scss/_buttons.scss */
@@ -7772,6 +7925,232 @@ input[type="button"].btn-block {
   height: 13px;
 }
 
+/* line 78, src/sass/3-modules/_carousel.scss */
+.services-carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 2, node_modules/bootstrap/scss/mixins/_clearfix.scss */
+.services-carousel-inner::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/* line 85, src/sass/3-modules/_carousel.scss */
+.services-carousel-item-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(125vw - 14px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 85, src/sass/3-modules/_carousel.scss */
+  .services-carousel-item-wrapper {
+    width: calc(166.65vw - 14px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 85, src/sass/3-modules/_carousel.scss */
+  .services-carousel-item-wrapper {
+    width: calc(250vw - 14px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* line 85, src/sass/3-modules/_carousel.scss */
+  .services-carousel-item-wrapper {
+    width: calc(500vw - 14px);
+  }
+}
+
+/* line 104, src/sass/3-modules/_carousel.scss */
+.services-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(565px * 2);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/* line 110, src/sass/3-modules/_carousel.scss */
+.services-col .service-item {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 115, src/sass/3-modules/_carousel.scss */
+.services-col .service-item:hover .service-overlay {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* line 117, src/sass/3-modules/_carousel.scss */
+.services-col .service-item:hover .service-overlay:after {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* line 121, src/sass/3-modules/_carousel.scss */
+.services-col .service-item:hover .service-caption {
+  bottom: 10px;
+}
+
+/* line 128, src/sass/3-modules/_carousel.scss */
+.service-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 136, src/sass/3-modules/_carousel.scss */
+.service-caption h4 {
+  color: #fff;
+  margin-bottom: auto;
+  margin-top: 0px;
+  max-width: 260px;
+}
+
+/* line 145, src/sass/3-modules/_carousel.scss */
+.service-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 155, src/sass/3-modules/_carousel.scss */
+.service-overlay#service1 {
+  background-image: url("../images/event-consulting.png");
+}
+
+/* line 158, src/sass/3-modules/_carousel.scss */
+.service-overlay#service3 {
+  background-image: url("../images/creative.png");
+}
+
+/* line 161, src/sass/3-modules/_carousel.scss */
+.service-overlay#service5 {
+  background-image: url("../images/design-print.png");
+}
+
+/* line 164, src/sass/3-modules/_carousel.scss */
+.service-overlay#service7 {
+  background-image: url("../images/event-marketing-pr.png");
+}
+
+/* line 167, src/sass/3-modules/_carousel.scss */
+.service-overlay#service2 {
+  background-image: url("../images/venue-selection.png");
+}
+
+/* line 170, src/sass/3-modules/_carousel.scss */
+.service-overlay#service4 {
+  background-image: url("../images/event-production.png");
+}
+
+/* line 173, src/sass/3-modules/_carousel.scss */
+.service-overlay#service6 {
+  background-image: url("../images/photography-videography.png");
+}
+
+/* line 176, src/sass/3-modules/_carousel.scss */
+.service-overlay#service8 {
+  background-image: url("../images/entertainment-talent-booking.png");
+}
+
+/* line 179, src/sass/3-modules/_carousel.scss */
+.service-overlay#service10 {
+  background-image: url("../images/event-consulting.png");
+}
+
+/* line 183, src/sass/3-modules/_carousel.scss */
+.service-overlay:after {
+  background-color: rgba(0, 0, 0, 0);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 195, src/sass/3-modules/_carousel.scss */
+#services-carousel .carousel-control-next, #services-carousel .carousel-control-prev {
+  width: 4%;
+}
+
+/* line 198, src/sass/3-modules/_carousel.scss */
+#services-carousel .icon-wrapper {
+  width: 25px;
+  height: 60px;
+  background: #ef3e32;
+}
+
+/* line 205, src/sass/3-modules/_carousel.scss */
+.yellow {
+  background: #ffc107;
+}
+
+/* line 208, src/sass/3-modules/_carousel.scss */
+.orange {
+  background: #fd7e14;
+}
+
+/* line 211, src/sass/3-modules/_carousel.scss */
+.purple {
+  background: #6f42c1;
+}
+
+/* line 214, src/sass/3-modules/_carousel.scss */
+.green {
+  background: #28a745;
+}
+
+/* line 217, src/sass/3-modules/_carousel.scss */
+.blue {
+  background: #007bff;
+}
+
 /* line 2, src/sass/3-modules/_images.scss */
 .image-right {
   position: absolute;
@@ -8025,6 +8404,18 @@ button.bg-accent:focus {
   background-color: #56246b !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+a.bg-transparent:hover, a.bg-transparent:focus,
+button.bg-transparent:hover,
+button.bg-transparent:focus {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
 /* line 13, node_modules/bootstrap/scss/utilities/_background.scss */
 .bg-white {
   background-color: #fff !important;
@@ -8128,6 +8519,11 @@ button.bg-accent:focus {
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-accent {
   border-color: #753191 !important;
+}
+
+/* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
+.border-transparent {
+  border-color: transparent !important;
 }
 
 /* line 25, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -12488,6 +12884,16 @@ a.text-dark:hover, a.text-dark:focus {
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 a.text-accent:hover, a.text-accent:focus {
   color: #471e58 !important;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
+.text-transparent {
+  color: transparent !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+a.text-transparent:hover, a.text-transparent:focus {
+  color: rgba(0, 0, 0, 0) !important;
 }
 
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
