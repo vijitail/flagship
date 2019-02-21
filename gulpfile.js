@@ -208,7 +208,7 @@ var buildStyles = function (done) {
 	src(paths.styles.input)
 		.pipe(sass({
 			outputStyle: 'expanded',
-			sourceComments: true
+			sourceComments: false
 		}))
 		.pipe(prefix({
 			browsers: ['last 2 version', '> 0.25%'],
