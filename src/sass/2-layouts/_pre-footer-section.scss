@@ -1,0 +1,23 @@
+
+#pre-footer-section {
+    min-height: 140px;
+    background: theme-color('accent');
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    display: flex;
+    & > .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    & .pre-footer-text {
+        color: #fff;
+        font-size: 28px;
+        font-weight: $font-weight-semibold;
+        font-family: $font-family-base;
+        margin-bottom: 0;
+    }
+}

@@ -7,9 +7,20 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+    font-size: 14px;
+    font-family: $font-family-base;
 
     span {
         font-weight: $font-weight-bold;
         text-decoration: underline;
+        margin: auto 10px;
+
+        & img {
+            margin-right: 10px; 
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        display: none;
     }
 }

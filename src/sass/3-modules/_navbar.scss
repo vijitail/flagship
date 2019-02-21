@@ -37,3 +37,35 @@
         }
     }
 }
+
+.navbar-toggler {
+    position: relative;
+    height: 30px;
+}
+
+.custom-navbar-toggler-icon {
+    display: block;
+    margin: auto;
+    background: theme-color('primary');
+    height: 4px;
+    border-radius: 5px;
+    width: 35px;
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 4px;
+        border-radius: 5px;
+        width: 35px;
+    }
+
+    &:before {
+        top: 0;
+        background: theme-color('accent');
+    }
+    &:after {
+        bottom: 0;
+        background: theme-color('secondary');
+    }
+}
